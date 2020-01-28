@@ -2,7 +2,7 @@
 Build a personal web blog with framework of Java Spring boot and semantic-UI
 
 # File Structure
-** My Blog front-end **
+### My Blog front-end
     - static
         - css
         - images
