@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Anout Me</title>
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../static/css/css1.css">
+</head>
+<body>
+    <!--navigation bar-->
+    <nav class="ui inverted attached segment m-padded-tb-mini m-shadow-small" >
+        <div class="ui container">
+            <div class="ui inverted secondary stackable menu">
+                <h2 class="ui teal header item">ZW-Blog</h2>
+                <a href="#" class="m-item item m-mobile-hide"><i class="home icon"></i> Home Page</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="idea icon"></i>Category</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="tags icon"></i>Label</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="clone icon"></i>Archive</a>
+                <a href="#" class="active m-item item m-mobile-hide"><i class="info icon"></i>About Me</a>
+                <div class="right m-item item m-mobile-hide">
+                    <div class="ui icon inverted transparent input">
+                        <input type="text" placeholder="Search...">
+                        <i class="search link icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="#" class="ui menu toggle black icon button m-top-right m-mobile-show">
+            <i class="sidebar icon"></i>
+        </a>
+    </nav>
+
+    <!--middle content-->
+    <div class="m-container m-padded-tb-big">
+        <div class="ui container">
+            <div class="ui stackable grid">
+                <div class="eleven wide column">
+                    <div class="ui segment">
+                        <img src="https://images.unsplash.com/photo-1577278979556-9bc983f89317?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=60" alt="" class="ui rounded image">
+                    </div>
+                </div>
+                
+                <div class="five wide column">
+                    <div class="ui top attached segment">
+                        <div class="ui teal header">About Me</div>
+                    </div>
+                    <div class="ui attached segment">
+                        <p class = "m-text">This is the blog to share some thoughts about computer science. Welcome to discuss with me!</p>
+                        <p class = "m-text">In the scope of Java, Python, C#,etc. </p>
+                    </div>
+                    <div class="ui attached segment">
+                        <div class="ui orange left pointing basic label m-margin-tp-tiny">Coding</div>
+                        <div class="ui orange left pointing basic label m-margin-tp-tiny"">Baking</div>
+                        <div class="ui orange left pointing basic label m-margin-tp-tiny"">Creative Thinking</div>
+                        <div class="ui orange left pointing basic label m-margin-tp-tiny"">Dancing</div>
+                    </div>
+                    <div class="ui attached segment">
+                        <div class="ui teal left pointing basic label m-margin-tp-tiny">Java</div>
+                        <div class="ui teal left pointing basic label m-margin-tp-tiny">JavaScrpt</div>
+                        <div class="ui teal left pointing basic label m-margin-tp-tiny">MySql</div>
+                        <div class="ui teal left pointing basic label m-margin-tp-tiny">Python</div>
+                        <div class="ui teal left pointing basic label m-margin-tp-tiny">R</div>
+                        <div class="ui teal left pointing basic label m-margin-tp-tiny">...</div>
+                    </div>
+
+                    <div class="ui bottom attached segment">
+                        <a href="#" class="ui textpop circular icon button" data-content="https://github.com/ZheqiWang" data-position="bottom center"><i class="github icon"></i></a>
+                        <a href="#" class="ui weixin circular icon button" data-content="wzq578366017" data-position="bottom center"><i class="weixin icon"></i></a>
+                        <a href="#" class="ui textpop circular icon button" data-content="wangzheqi130@gmail.com" data-position="bottom center"><i class="google icon"></i></a>
+                    </div>
+                    <div class="ui QRcode flowing popup transition hidden">
+                        <img src="../static/images/WechatIMG1.jpeg" alt="" class="ui rounded image" style="width: 100px">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+       
+    </div>
+
+    <br>
+    <br>
+
+    <!--bottom footer-->
+    <footer class="ui inverted vertical segment m-padded-tb-massive">
+        <div class="ui center aligned container">
+            <div class="ui inverted divided stackable grid">
+                <div class="three wide column">
+                    <img src="../static/images/WechatIMG1.jpeg" class="ui centered rounded image" alt="" style="width: 110px">
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header">Latest Blog</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">User Story</a>
+                        <a href="#" class="item">Semantic UI</a>
+                        <a href="#" class="item">Leetcode</a>
+                    </div>
+                </div>
+                <div class="four wide column">
+                    <h4 class="ui inverted header">Contact Me</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">Email: wangzheqi130@gmail.com</a>
+                        <a href="#" class="item">Instagram: wangzheqi130</a>
+                    </div>
+                </div>
+                <div class="six wide column">
+                    <h4 class="ui inverted header">About Me</h4>
+                    <p class="m-text-thin m-text-spaced m-opacity-tiny">This is Zheqi Wang's Blog, to share something about my CS study.</p>
+                </div>
+            </div>
+            <div class="ui inverted section divider"></div>
+            <p class="m-text-thin m-text-spaced m-opacity-mini m-font-size ">Copyright©2019-2020 ZheqiW Designed by ZheqiW </p>
+        </div>
+    </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+
+    <script>
+        $('.menu.toggle').click(function () {
+            $('.m-item').toggleClass('m-mobile-hide');
+        });
+
+        $('.textpop').popup();
+
+        $('.weixin').popup({
+            popup : ('.QRcode'),
+            on : 'hover',
+            position : 'bottom center'
+        });
+    </script>
+</body>
+</html>
