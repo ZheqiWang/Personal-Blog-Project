@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog Management</title>
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../../static/lib/editormd/css/editormd.min.css">
+    <link rel="stylesheet" href="../../static/css/css1.css">
+</head>
+<body>
+    <!--navigation bar-->
+    <nav class="ui inverted attached segment m-padded-tb-mini m-shadow-small" >
+        <div class="ui container">
+            <div class="ui inverted secondary stackable menu">
+                <h2 class="ui teal header item">Management Platform </h2>
+                <a href="#" class="m-item item m-mobile-hide"><i class="home icon"></i>Blog</a>
+                <a href="#" class="active m-item item m-mobile-hide"><i class="idea icon"></i>Category</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="tags icon"></i>Label</a>
+
+                <div class="right m-item m-mobile-hide menu">
+                    <div class="ui dropdown item">
+                        <div class="text">
+                            <img src="https://images.unsplash.com/photo-1577278979556-9bc983f89317?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=60" class="ui avatar image" style="width: 30px">
+                            <span>Zheqi Wang</span>
+                        </div>
+
+                        <i class="dropdown icon"></i>
+                        <div class="menu">
+                            <a href="#" class="item">Log out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="#" class="ui menu toggle black icon button m-top-right m-mobile-show">
+            <i class="sidebar icon"></i>
+        </a>
+    </nav>
+    <!--secondary navigation bar-->
+    <div class="ui attached pointing menu">
+        <div class="ui container">
+            <div class="right menu">
+                <a href="#" class="active teal item">Publish</a>
+                <a href="#" class="item">List</a>
+            </div>
+        </div>
+    </div>
+
+    <!--middle content-->
+    <div class="m-container m-padded-tb-big">
+        <div class="ui container">
+            <form action="#" method="post" class="ui form">
+
+                <!--passage title-->
+                <div class="required field">
+                    <div class="ui left labeled input">
+                        <div class="ui selection compact teal basic dropdown label">
+                            <input type="hidden" value="Original">
+                            <i class="dropdown icon"></i>
+                            <div class="text">Original</div>
+
+                            <div class="menu">
+                                <div class="item" data-value="Original">Original</div>
+                                <div class="item" data-value="Forward">Forward</div>
+                                <div class="item" data-value="Translated">Translated</div>
+                            </div>
+                        </div>
+
+                        <input type="text" name="title" placeholder="Title">
+                    </div>
+                </div>
+
+                <!--passage content-->
+                <div class="field">
+                    <div id="md-content" style="z-index: 1 !important;">
+                        <textarea placeholder="Blog content" name="content" style="display: none;">
+                            #### Disabled options
+
+                            - TeX (Based on KaTeX);
+                            - Emoji;
+                            - Task lists;
+                            - HTML tags decode;
+                            - Flowchart and Sequence Diagram;
+
+                        </textarea>
+                    </div>
+                </div>
+
+                <!--Label & Category-->
+                <div class="two fields">
+                    <!--Category-->
+                    <div class="field">
+                        <div class="ui left labeled action input">
+                            <label class="ui compact teal basic label">Category</label>
+                            <div class="ui fluid selection dropdown">
+                                <input type="hidden" name="Category">
+                                <i class="dropdown icon"></i>
+                                <div class="default text">Category</div>
+
+                                <div class="menu">
+                                    <div class="item" data-value="1">Error Catalog</div>
+                                    <div class="item" data-value="2">Developer Book</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Labels-->
+                    <div class="field">
+                        <div class="ui left labeled action input">
+                            <label class="ui compact teal basic label">Label</label>
+                            <div class="ui fluid multiple search selection dropdown">
+                                <input type="hidden" name="Label">
+                                <i class="dropdown icon"></i>
+                                <div class="default text">Label</div>
+
+                                <div class="menu">
+                                    <div class="item" data-value="1">Java</div>
+                                    <div class="item" data-value="2">Python</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--cover image address-->
+                <div class="field">
+                    <div class="ui left labeled input">
+                        <label class="ui teal basic label">Cover Image Address</label>
+                        <input type="text" name="indexPicture" placeholder="Cover Image Address">
+                    </div>
+                </div>
+
+                <!--Checkbox-->
+                <div class="inline fields">
+                    <div class="field">
+                        <div class="ui checkbox">
+                            <input type="checkbox" name="recommend" id="recommend" checked class="hidden">
+                            <label for="recommend" >Recommend</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui checkbox">
+                            <input type="checkbox" name="forwardinfo" id="forwardinfo" class="hidden">
+                            <label for="forwardinfo">Forward Information</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui checkbox">
+                            <input type="checkbox" name="appreciation" id="appreciation" class="hidden">
+                            <label for="appreciation">Appreciation</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui checkbox">
+                            <input type="checkbox" name="comment" id="comment" class="hidden">
+                            <label for="comment">Comment</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Error message show-->
+                <div class="ui error message"></div>
+
+                <!--Buttons: Publish & Save & Back-->
+                <div class="ui right aligned container">
+                    <button type="button" class="ui button" onclick="window.history.go(-1)">Back</button>
+                    <button class="ui secondary button">Save</button>
+                    <button class="ui teal button">Publish</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+    <!--bottom footer-->
+    <footer class="ui inverted vertical segment m-padded-tb-massive">
+        <div class="ui center aligned container">
+            <div class="ui inverted divided stackable grid">
+                <div class="three wide column">
+                    <img src="../../static/images/WechatIMG1.jpeg" class="ui centered rounded image" alt="" style="width: 110px">
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header">Latest Blog</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">User Story</a>
+                        <a href="#" class="item">Semantic UI</a>
+                        <a href="#" class="item">Leetcode</a>
+                    </div>
+                </div>
+                <div class="four wide column">
+                    <h4 class="ui inverted header">Contact Me</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">Email: wangzheqi130@gmail.com</a>
+                        <a href="#" class="item">Instagram: wangzheqi130</a>
+                    </div>
+                </div>
+                <div class="six wide column">
+                    <h4 class="ui inverted header">About Me</h4>
+                    <p class="m-text-thin m-text-spaced m-opacity-tiny">This is Zheqi Wang's Blog, to share something about my CS study.</p>
+                </div>
+            </div>
+            <div class="ui inverted section divider"></div>
+            <p class="m-text-thin m-text-spaced m-opacity-mini m-font-size ">Copyright©2019-2020 ZheqiW Designed by ZheqiW </p>
+        </div>
+    </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<script src="../../static/lib/editormd/editormd.min.js"></script>
+
+    <script>
+
+        //initialize markdown editor
+        var contentEditor;
+
+        $(function() {
+            contentEditor = editormd("md-content", {
+                width   : "100%",
+                height  : 640,
+                syncScrolling : "single",
+                path    : "../static/lib/editormd/lib/"
+            });
+        });
+
+        $('.menu.toggle').click(function () {
+            $('.m-item').toggleClass('m-mobile-hide');
+        });
+
+        $('.ui.dropdown').dropdown({
+            on : 'hover'
+        });
+
+        $('.ui.form').form({
+            fields : {
+                title : {
+                    identifier: 'title',
+                    rules :[{
+                        type : 'empty',
+                        prompt: 'Title: Please input blog title'
+                    }]
+                }
+            }
+        })
+    </script>
+</body>
+</html>

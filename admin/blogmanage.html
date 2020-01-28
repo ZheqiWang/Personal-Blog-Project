@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog Management</title>
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../../static/css/css1.css">
+</head>
+<body>
+    <!--navigation bar-->
+    <nav class="ui inverted attached segment m-padded-tb-mini m-shadow-small" >
+        <div class="ui container">
+            <div class="ui inverted secondary stackable menu">
+                <h2 class="ui teal header item">Management Platform </h2>
+                <a href="#" class="m-item item m-mobile-hide"><i class="home icon"></i>Blog</a>
+                <a href="#" class="active m-item item m-mobile-hide"><i class="idea icon"></i>Category</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="tags icon"></i>Label</a>
+
+                <div class="right m-item m-mobile-hide menu">
+                    <div class="ui dropdown item">
+                        <div class="text">
+                            <img src="https://images.unsplash.com/photo-1577278979556-9bc983f89317?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=60" class="ui avatar image" style="width: 30px">
+                            <span>Zheqi Wang</span>
+                        </div>
+
+                        <i class="dropdown icon"></i>
+                        <div class="menu">
+                            <a href="#" class="item">Log out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="#" class="ui menu toggle black icon button m-top-right m-mobile-show">
+            <i class="sidebar icon"></i>
+        </a>
+    </nav>
+
+    <div class="ui attached pointing menu">
+        <div class="ui container">
+            <div class="right menu">
+                <a href="#" class="item">Publish</a>
+                <a href="#" class="active teal item">List</a>
+            </div>
+        </div>
+    </div>
+
+    <!--middle content-->
+    <div class="m-container m-padded-tb-big">
+        <div class="ui container">
+            <form action="#" class="ui segment form" method="post">
+                <div class="inline fields">
+                    <div class="field">
+                        <input type="text" name="title" placeholder="Title">
+                    </div>
+                    <div class="field">
+                        <div class="ui selection dropdown">
+                            <input type="hidden" name="Category">
+                            <i class="dropdown icon"></i>
+                            <div class="default text">Category</div>
+                            <div class="menu">
+                                <div class="item" data-value="1">Error Catalog</div>
+                                <div class="item" data-value="2">Developer Book</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui checkbox">
+                            <input type="checkbox" id="recommend" name="recommend">
+                            <label for="recommend">Recommend</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <button class="ui teal basic button">
+                            <i class="search icon"></i>
+                            Search
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+            <table class="ui celled table">
+                <thead>
+                <tr>
+                    <th></th>
+                    <th>Title</th>
+                    <th>Category</th>
+                    <th>Recommend</th>
+                    <th>Updated Time</th>
+                    <th>Operation</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Leetcode Practice List</td>
+                        <td>Java</td>
+                        <td>Yes</td>
+                        <td>2019-12-2 19:56</td>
+                        <td>
+                            <a href="#" class="ui mini teal basic button">Edit</a>
+                            <a href="#" class="ui mini orange basic button">Delete</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Leetcode Practice List</td>
+                        <td>Java</td>
+                        <td>Yes</td>
+                        <td>2019-12-2 19:56</td>
+                        <td>
+                            <a href="#" class="ui mini teal basic button">Edit</a>
+                            <a href="#" class="ui mini orange basic button">Delete</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Leetcode Practice List</td>
+                        <td>Java</td>
+                        <td>Yes</td>
+                        <td>2019-12-2 19:56</td>
+                        <td>
+                            <a href="#" class="ui mini teal basic button">Edit</a>
+                            <a href="#" class="ui mini orange basic button">Delete</a>
+                        </td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <th colspan="6">
+                            <div class="ui mini pagination menu">
+                                <a class="item">Previous</a>
+                                <a class="item">Next</a>
+                            </div>
+                            <a href="#" class="ui mini right floated teal basic button">New</a>
+                        </th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+    <!--bottom footer-->
+    <footer class="ui inverted vertical segment m-padded-tb-massive">
+        <div class="ui center aligned container">
+            <div class="ui inverted divided stackable grid">
+                <div class="three wide column">
+                    <img src="../../static/images/WechatIMG1.jpeg" class="ui centered rounded image" alt="" style="width: 110px">
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header">Latest Blog</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">User Story</a>
+                        <a href="#" class="item">Semantic UI</a>
+                        <a href="#" class="item">Leetcode</a>
+                    </div>
+                </div>
+                <div class="four wide column">
+                    <h4 class="ui inverted header">Contact Me</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">Email: wangzheqi130@gmail.com</a>
+                        <a href="#" class="item">Instagram: wangzheqi130</a>
+                    </div>
+                </div>
+                <div class="six wide column">
+                    <h4 class="ui inverted header">About Me</h4>
+                    <p class="m-text-thin m-text-spaced m-opacity-tiny">This is Zheqi Wang's Blog, to share something about my CS study.</p>
+                </div>
+            </div>
+            <div class="ui inverted section divider"></div>
+            <p class="m-text-thin m-text-spaced m-opacity-mini m-font-size ">Copyright©2019-2020 ZheqiW Designed by ZheqiW </p>
+        </div>
+    </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+
+    <script>
+        $('.menu.toggle').click(function () {
+            $('.m-item').toggleClass('m-mobile-hide');
+        });
+
+        $('.ui.dropdown').dropdown({
+            on : 'hover'
+        });
+    </script>
+</body>
+</html>
